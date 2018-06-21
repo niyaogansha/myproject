@@ -34,7 +34,9 @@ gulp.task("server",function(){
 		}
 	);
 	//index.html文件和scss文件和js文件image文件实现自动更新
-	gulp.watch("html/*.html",["copy-index"]);	
+	gulp.watch("html/*.html",["copy-index"]);
+	gulp.watch("index.html",["copy-index"]);
+	
 	gulp.watch("js/*.js",["copy-js"]);
 	gulp.watch("image/**",["copy-img"]);	
 	gulp.watch("sass/*.scss",["sass"]);
