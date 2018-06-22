@@ -47,8 +47,8 @@ gulp.task("default",["server"]);
 //压缩css文件
 gulp.task("sass",function(){
 	gulp.src("sass/*.scss")
-	.pipe(sass())
 	.pipe(sourcemaps.init())
+	.pipe(sass())	
 	.pipe(sourcemaps.write())
 	.pipe(cleanCss())
 	.pipe(gulp.dest("dist/css")).pipe(connect.reload());
