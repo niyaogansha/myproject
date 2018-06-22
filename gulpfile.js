@@ -7,6 +7,7 @@ var rename = require("gulp-rename");
 var cleanCss = require("gulp-clean-css");
 var imagemin = require("gulp-imagemin");
 var babel = require("gulp-babel");
+var sourcemaps = require("gulp-sourcemaps");
 
 //拷贝html文件下所有的html文件到dist文件夹下
 gulp.task("copy-index",function(){
@@ -47,6 +48,8 @@ gulp.task("default",["server"]);
 gulp.task("sass",function(){
 	gulp.src("sass/*.scss")
 	.pipe(sass())
+	.pipe(sourcemaps.init())
+	.pipe(sourcemaps.write())
 	.pipe(cleanCss())
 	.pipe(gulp.dest("dist/css")).pipe(connect.reload());
 })
