@@ -93,15 +93,20 @@ header{
 
 
 //搜索框
-div{
+.aa{
+    display: flex;
+    position: relative;
     .top{
         height: 70px;
         width: 1200px;
         margin: 0 auto;
+        display: flex;
         img{
             vertical-align: top;
             width: 192px;
             height: 74px;
+            margin-left: 49px;
+            border: none;
         }
         .box{
             width: 460px;
@@ -109,6 +114,8 @@ div{
             background: url(../img/tp3.png) no-repeat;
             background-size: 460px 38px;
             position: relative;
+            z-index: 9999;
+            margin-left: 110px;
             .txt{
                 width: 368px;
                 border: none;
@@ -129,10 +136,240 @@ div{
                 width: 65px;
                 border: none;
                 cursor: pointer;                              
-                position: absolute;
-                height: ;
+                position: absolute;               
                 right: 0;
-                bottom: 0;
+                top: 0;
+                height: 38px;
+                width: 80px;
+                background: none;
+            }
+        }
+    }
+    nav{
+        width: 100%;
+        margin-top: -45px;
+        font-family: "微软雅黑";
+        z-index: 95;
+        position: relative;
+        position: absolute;
+        bottom: 0;
+        .ul{
+            margin-left: 334px;
+//          background: lightgoldenrodyellow;
+            display: flex;
+            li{
+                display: block;
+                line-height: 45px;
+                height: 45px;
+                padding: 0 88px 0 17px;
+                font-size: 22px;
+                position: relative;
+            }
+            .a{
+                transition: color 0.5s;
+                font-family: "微软雅黑";
+                font-size: 20px;
+                font-weight: 600;
+                span{
+                    height: 0px;
+                }
+                &:hover{
+                    color: #C81417;
+                    span{ 
+                        transition-property: height;
+                        transition-duration: 0.5s;  
+                        height: 5px;
+                        position: absolute;
+                        bottom: 0;
+                        width: 60px;
+                        display: block;
+                        background: #C81417;   
+                                           
+                    }
+                }
+            }
+            .sy{
+                .a{
+                    color: #C81417;
+                }
+               span{
+                    height: 5px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 60px;
+                    display: block;
+                    background: #C81417;
+                }
+            }
+            .mw{
+                .mw-top{
+                    display: flex;
+                    img{
+                        height: 20px;
+                        width: 18px;
+                        border: none;
+                        margin-top: 14px;
+                        margin-right: 6px;
+                    }
+                    &:hover{
+                        a{
+                            color: #333;
+                        }
+                        
+                    } 
+                }
+                .bottom{                   
+                    width: 1140px;
+                    height: 568px;
+                    background: #fff;
+                    z-index: 90;
+                    position: absolute;
+                    left: -765px;
+                    margin-top: 0;
+                    
+                    border: 1px solid #d1d1d1;
+                    border-top: 0;
+                    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.13);
+                    box-shadow: 0 0 20px rgba(0,0,0,.13);
+                    border-radius: 0 0 8px 8px;
+                    -webkit-border-radius: 0 0 8px 8px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    display: none;
+                }
+                &:hover{
+                    .bottom{
+                        display: block;
+                    }
+                }
+                .shang{
+                    display: block;
+                    width: 770px;
+                    margin: 0 auto;                   
+                    overflow: hidden;
+                    ul{
+                        width: 100%;
+                        overflow: hidden;
+                        margin-left: -20px;
+                        border-bottom: 1px solid #666;                        
+                        li{
+                            padding: 0;
+                            width: 76px;
+                            height: 28px;
+                            text-align: center;
+                            line-height: 28px;
+                            border: 1px solid #666;
+                            border-radius: 6px;
+                            margin: 20px 0 20px 70px;
+                            font-size: 16px;
+                            color: #333;
+                            float: left;
+                            cursor: pointer;
+                            &:hover{
+                                color: #D61518;;
+                                border-color: #D61518;;
+                            }
+                        }
+                        li:nth-child(1){
+                            color: #D61518;;
+                            border-color: #D61518;
+                        }
+                    }
+                }
+                .zhong{
+                    margin: 0 50px;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        width: 100%;
+                        font-weight: 900px;
+                        font-size: 24px;
+                        color: #333;
+                        line-height: 90px;
+                        text-align: center;
+                        font-family: "微软雅黑";
+                    }
+                    .ap{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .boxitem{
+                        float: left;
+                        color: #333;
+                        width: 240px;
+                        height: 80px;
+                        position: relative;
+                        .boxtit{
+                            display: flex;
+                            max-height: 155px;
+                        }
+                        .ab{
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 11px;
+                            .tit{
+                                font-size: 18px;
+                                line-height: 1;
+                                margin-bottom: 16px;
+                                width: 150px;
+                                text-align: left;
+                                
+                            }
+                            .crum{
+                                font-size: 15px;
+                                line-height: 1;
+                                width: 150px;
+                                max-height: 30px;
+                            }
+                            a{
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                        }                                               
+                        img{
+                            width: 70px;
+                        }
+                    }
+                }
+                .xia{
+                    margin: 0 50px;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        width: 100%;
+                        font-weight: 900px;
+                        font-size: 24px;
+                        color: #333;
+                        line-height: 80px;
+                        text-align: center;
+                        font-family: "微软雅黑";
+                    }
+                    .sb{
+                        max-height: 148px;
+                        overflow: hidden;
+                        display: flex;
+                        flex-wrap: wrap;
+                        a{
+                            display: block;
+                            width: 130px;
+                            height: 64px;
+                            float: left;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            line-height: 0;
+                            margin-top: 1px;
+                            
+                            img{
+                                width: 110px;
+                                height: 62px;
+                                border: 1px solid #D1D1D1;
+                            }
+                        }
+                    }
+                }
+                
             }
         }
     }
