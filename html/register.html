@@ -3,8 +3,172 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/register.js" type="text/javascript" charset="utf-8"></script>
 		<title></title>
 	</head>
 	<body>
+		
+		<!--头部信息-->
+		<div style="width: 100%;height: 120px;">
+			<div class="header">
+				<div class="header-left">
+					<a href="../index.html"><img src="../img/tp2.png"/></a>
+				</div>
+				
+				<div class="header-right">
+					<ul>
+						<li>
+							<em></em>
+							<div class="long">
+								<span>100%</span>
+								<p>全厂正品保证</p>
+							</div>
+						</li>
+						<li>
+							<em></em>
+							<div class="long">
+								<span>Mail</span>
+								<p>每天低价特卖</p>
+							</div>
+						</li>
+						<li>
+							<em></em>
+							<div class="long">
+								<span>7Days</span>
+								<p>七天无理由换货</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--注册框-->
+		<div style="width: 100%;">
+			<div class="register-main">
+				<div class="register-main-left">
+					<a href=""><img src="../img/tb1.jpg"/></a>
+				</div>
+				
+				<div class="register-main-right">
+					<div class="lmr-top">
+						<span>注册华盛奥莱会员</span>
+						<a href="logon.html">已有账户，登录</a>
+					</div>
+					
+					<!--账号框-->
+					<div class="lmr-center-1" id="lmr-center-1">
+						<ul class="list1">
+							<li>注册账号</li>
+							<li>
+								<input type="text" id="txt" placeholder="请输入手机号" />
+								<em></em>								
+							</li>							
+						</ul>
+						<span class="ap0" style="display: none;">请输入注册的手机号</span>
+						<span class="ap1" style="display: none;">用户名不能为空</span>
+						<span class="ap2" style="display: none;">请输入正确的手机号</span>
+						<span class="ap3" style="display: none;">手机号格式正确</span>
+					</div>
+					
+					<!--密码框-->
+					<div class="lmr-center-1" id="lmr-center-2">
+						<ul class="list2">
+							<li>注册密码</li>
+							<li>
+								<input type="password" id="psw" placeholder="输入密码" />
+								<em></em>								
+							</li>							
+						</ul>
+						<span class="bp0" style="display: none;">6-20位字符.可使用字母.数字.或字符的组合</span>												
+						<span class="bp1" style="display: none;">密码过于简单,有被盗风险</span>	
+						<span class="bp2" style="display: none;">密码不能为空</span>
+						<span class="bp3" style="display: none;">密码格式正确</span>
+					</div>
+					
+					<!--确认密码-->
+					<div class="lmr-center-1" id="lmr-center-3">				
+						<ul class="list3">
+							<li>确认密码</li>
+							<li>
+								<input type="password" id="psw2" placeholder="请输入密码" />
+								<em></em>								
+							</li>							
+						</ul>
+						<span style="display: none;" class="sp0">请确认密码</span>
+						<span style="display: none;" class="sp1">两次密码输入一致</span>
+						<span style="display: none;" class="sp2">两次密码输入不一致</span>
+					</div>
+					
+					<!--验证码-->
+					<div class="lmr-center-1" id="lmr-center-4">				
+						<ul class="list4">
+							<li>验证码</li>
+							<li>
+								<input type="txt" id="txt2" placeholder="请输入验证码" />																
+							</li>	
+							<li class="l2">22</li>
+						</ul>
+						<span class="cp0" style="display: none;">请输入验证码</span>
+						<span class="cp1" style="display: none;">验证码不正确</span>
+						<span class="cp2" style="display: none;">验证码正确</span>
+						<span class="cp3" style="display: none;">验证码不能为空</span>
+					</div>
+					
+					<!--注册按钮-->
+					<div class="lmr-center-2">
+						<input type="button" value="注册" id="btn"/>
+					</div>
+					
+					<!--复选框-->
+					
+					<div class="lmr-center-3">
+						<a href=""> 《奥莱购会员协议》</a>
+						<input type="checkbox" id="cb" checked="checked"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--footer底部-->
+		
+		<div class="footer-bottom">
+					<div class="fb-top">						
+						<a href="">关于奥莱购　|</a>
+						<a href="">联系我们　|</a>
+						<a href="">诚聘英才　|</a>
+						<a href="">商务合作　|</a>
+						<a href="">友情链接　|</a>
+						<a href="">华南城网　|</a>
+						<a href="">华盛Outlets</a>						
+					</div>
+					<div class="fb-center">						
+                 		Copyright © 2013-2016 深圳华盛电子商务有限公司 粤ICP备16081451-1号 All Right 
+                 		<br />
+                 		<br />
+                 		 深圳市龙岗区平湖华南城1号交易广场4楼奥莱购（深圳华盛电子商务有限公司）
+                 		<br />
+                 		 <br />
+                 		 <a href="">
+                 		 	<img src="../img/tb0.png"/>
+                 		 	<p>粤公网安备 44030702000487号</p>
+                 		 </a>
+					</div>
+					<div class="fb-bottom">
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href="">站长统计</a>
+					</div>
+				</div>
 	</body>
 </html>

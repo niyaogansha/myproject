@@ -62,3 +62,10 @@ for(var j = 0; j < aNums.length; j++){
 		move();
 	}
 }
+
+$(function(){
+	$("#cbl ul").find(".a1").click(function(){
+		console.log("aa")
+		$("html,body").animate({"scrollTop":0},500)
+	})
+})

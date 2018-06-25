@@ -1,0 +1,100 @@
+//商品列表
+.main-box1{
+    width: 1198px;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    .main-b-left{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        width: 30px;
+        height: 150px;
+        background: #fafafa;
+        border-right: 1px solid #e6e6e6;
+        span{
+            display: block;
+            width: 20px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            margin-top: 26px;            
+        }
+    }
+    ul{
+        li{
+            margin-top: 10px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            a{
+                display: flex;
+            }
+            .a-left{
+                display: block;
+                img{
+                    width: 129px;
+                    height: 130px;
+                    border: 1px solid #eaeaea;
+                }
+            }
+            .a-right{
+                display: block;
+                width: 130px;
+                height: 130px;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                em{
+                    display: block;
+                    font-style: normal;
+                    height: 52px;
+                    color: #333;
+                    font-size: 10px;
+                    width: 130px;
+                }
+                i{
+                    display: block;
+                    font-style: normal;
+                    width: 80px;
+                    height: 30px;
+                    display: block;
+                    line-height: 30px;
+                    background: #e6e6e6;
+                    text-align: center;
+                    color: #656565;
+                    margin-top: 10px;
+                }
+                .ico{
+                    border: none;
+                    background: none;
+                    display: block;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #ff3243;
+                    font-style: normal;
+                    margin-top: 10px;               
+                }
+                
+                a{
+                    width: 80px;
+                    height: 30px;
+                    display: block;
+                    line-height: 30px;
+                    background: #e6e6e6;
+                    text-align: center;
+                    color: #656565;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+
