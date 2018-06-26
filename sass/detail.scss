@@ -1,0 +1,27 @@
+.detail{
+    width: 1200px;
+    margin: 0 auto;
+    .detail-top{
+        display: flex;
+        span{
+            display: block;
+            background: url(../img/sb5.png);
+            width: 22px;
+            height: 22px;
+            display: block;
+            background-position: -184px -618px;
+//          position: absolute;
+            margin-top: 8px;
+//          left: 0px;
+        }
+        a{
+            color: #333;
+            font-size: 12px;
+            line-height: 40px;
+            margin-left: 10px;
+            &:hover{
+                color: #ff3344;
+            }
+        }
+    }
+}

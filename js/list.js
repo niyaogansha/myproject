@@ -2,7 +2,7 @@ $(function(){
 	$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
 		console.log(data);
 		var str = "";
-		console.log(data[0].goodsID)
+//		console.log(data[0].goodsID)
 		for(var i = 0; i < 4; i++){
 			str += `<li data-id="${data[i].goodsID}">
 					<div class="m-b-a">
@@ -41,6 +41,7 @@ $(function(){
 		
 		var str4 = "";
 		var str5 = "";
+		
 		for(var i = 0; i < data.length; i++){
 			str4 += `<li data-id="${data[i].goodsID}">
 					 <a href="">
@@ -49,18 +50,54 @@ $(function(){
 					 <a href="" class="aq1">${data[i].goodsName}</a>
 					 <p>￥${data[i].price}</p>
 					 </li>`;
+					 
+			
 		}
 		$(".list-le-top ul").html(str4);
 		
-//		for(var i = 5; i < 10; i++){
-//			str5 += `<li data-id="${data[i].goodsId}">
-//					 <a href="">
-//					 <img src="${data[i].goodsListImg}"/>									
-//					 </a>
-//					 <a href="" class="aq1">${data[i].goodsName}</a>
-//					 <p>￥${data[i].price}</p>
-//					 </li>`;
-//		}
-//		$(".list-le-bottom ul").html(str5);
+	
+		var str6 = "";
+		for(var i = 0; i < data.length; i++){
+			str6 =  `<li data-id="${data[i].goodsID}">
+					<a href="" class="ss">
+					<img src="${data[i].goodsListImg}"/>
+					</a>
+					<div class="sm-pic">
+					<span class="sn1"></span>
+					<div class="sm-box">
+						 
+						 
+					</div>
+					<span class="sn2"></span>
+					</div>
+					<em>
+					￥${data[i].price}
+					<span>${data[i].discount}&nbsp;折优惠</span>
+					</em>
+					<a href="">
+					<i></i>
+					${data[i].goodsName}
+					</a>
+					</li>`
+		$(".list-ri-bottom ul").append(str6);
+			
+			var arr = JSON.parse(data[i].imgsUrl);
+			var str7 = "";
+			for(let j = 0; j < arr.length; j++){
+				str7 = `<img src = "${arr[j]}"/>`;
+				$(".sm-box").eq(i).append(str7);
+			}		
+		}
+		
+		$(".sn1").next().find("img").hover(function(){			
+			var oImg_src = $(this)[0].src;
+			var aImg = $(this).parent().parent().parent().children(".ss").children("img")[0];
+			aImg.src=oImg_src;
+		})
+		
+		
+		
+		
+		
 	})
 })
