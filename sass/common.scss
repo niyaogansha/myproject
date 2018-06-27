@@ -80,8 +80,24 @@ input,a{outline:none;}
         position: fixed;
         top: 104px;
         a{
+            position: relative;
             em{
                 background-position: -45px 2px;
+                span{
+                    font-style: normal;
+                    font-weight: 900;
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                    text-align: center;
+                    font-size: 16px;
+                    background: red;
+                    border-radius: 20%;
+                    color: white;
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                }
             }
         }
     }
@@ -421,9 +437,9 @@ header{
                     margin: 0 50px;
                     display: flex;
                     flex-direction: column;
-                    p{
+                    .p{
                         width: 100%;
-                        font-weight: 900px;
+                        font-weight: 900;
                         font-size: 24px;
                         color: #333;
                         line-height: 90px;
@@ -432,54 +448,71 @@ header{
                     }
                     .ap{
                         display: flex;
+                        
                         flex-wrap: wrap;
-                    }
-                    .boxitem{
-                        float: left;
-                        color: #333;
-                        width: 240px;
-                        height: 80px;
-                        position: relative;
-                        .boxtit{
-                            display: flex;
-                            max-height: 155px;
-                        }
-                        .ab{
-                            display: flex;
-                            flex-direction: column;
-                            margin-top: 11px;
-                            .tit{
-                                font-size: 18px;
-                                line-height: 1;
-                                margin-bottom: 16px;
-                                width: 150px;
-                                text-align: left;
-                                
-                            }
-                            .crum{
-                                font-size: 15px;
-                                line-height: 1;
-                                width: 150px;
-                                max-height: 30px;
-                            }
-                            a{
-                                &:hover{
-                                    color: red;
+                        .tit{
+//                          width: 30px;
+                            font-weight: 100;
+                            font-size: 16px;
+                            margin: 20px 10px;
+                            line-height: 20px;
+                            font-size: 16px;                          
+                            background: orange;
+                            &:hover{
+                                background: blueviolet;
+                                a{
+                                    color: white;
                                 }
                             }
-                        }                                               
-                        img{
-                            width: 70px;
+                            a{
+                                display: block;
+                                padding: 8px 10px;
+                                
+                            }
                         }
                     }
+//                  .boxitem{
+//                      float: left;
+//                      color: #333;
+//                      width: 240px;
+//                      height: 80px;
+//                      position: relative;
+//                      .boxtit{
+//                          display: flex;
+//                          max-height: 155px;
+//                      }
+//                      .ab{
+//                          display: flex;
+//                          flex-direction: column;
+//                          margin-top: 11px;
+//                          .tit{
+//                              font-size: 18px;
+//                              line-height: 1;
+//                              margin-bottom: 16px;
+//                              width: 150px;
+//                              text-align: left;
+//                              
+//                          }
+//                          .crum{
+//                              font-size: 15px;
+//                              line-height: 1;
+//                              width: 150px;
+//                              max-height: 30px;
+//                          }
+                            
+//                      }                                               
+//                      img{
+//                          width: 70px;
+//                      }
+//                  }
                 }
                 .xia{
                     margin: 0 50px;
                     display: flex;
                     flex-direction: column;
-                    p{
+                    .po{
                         width: 100%;
-                        font-weight: 900px;
+                        font-weight: 900;
                         font-size: 24px;
                         color: #333;
                         line-height: 80px;

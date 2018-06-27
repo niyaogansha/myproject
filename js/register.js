@@ -104,15 +104,29 @@ $(function(){
 	})
 	
 	//注册按钮
+//	$("#btn").click(function(){
+//		$.post("http://h6.duchengjiu.top/shop/api_user.php",{"status":"register","username":$("#txt").val(),"password":$("#psw").val()},function(data){
+//			console.log(data);
+//			if(data.code == 0){			
+//				alert(data.message);
+//				window.location.href="../html/logon.html";
+//			}else{
+//				alert(data.message);
+//			}
+//		});
+//	})
+
 	$("#btn").click(function(){
-		$.post("http://h6.duchengjiu.top/shop/api_user.php",{"status":"register","username":$("#txt").val(),"password":$("#psw").val()},function(data){
+		$.get("http://datainfo.duapp.com/shopdata/userinfo.php",{status:"register",userID:$("#txt").val(),password:$("#psw").val()},function(data){
+			data = JSON.parse(data);
 			console.log(data);
-			if(data.code == 0){			
-				alert(data.message);
-				window.location.href="../html/logon.html";
-			}else{
-				alert(data.message);
-			}
-		});
-	})
+						if(data == 0){
+							alert("用户名重名");
+						}else if(data==1){
+							window.location.href = "../html/logon.html";
+						}else{
+							alert("注册失败，请重试");
+						}
+					})
+				})
 })

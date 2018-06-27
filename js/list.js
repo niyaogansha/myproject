@@ -1,5 +1,7 @@
 $(function(){
-	$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
+	
+	var classid = location.search.split("=")[1];
+	$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",{classID:classid},function(data){
 		console.log(data);
 		var str = "";
 //		console.log(data[0].goodsID)
@@ -55,13 +57,13 @@ $(function(){
 		}
 		$(".list-le-top ul").html(str4);
 		
-	
+		//列表详细信息
 		var str6 = "";
 		for(var i = 0; i < data.length; i++){
 			str6 =  `<li data-id="${data[i].goodsID}">
-					<a href="" class="ss">
+					<div class="ss">
 					<img src="${data[i].goodsListImg}"/>
-					</a>
+					</div>
 					<div class="sm-pic">
 					<span class="sn1"></span>
 					<div class="sm-box">
@@ -87,15 +89,30 @@ $(function(){
 				str7 = `<img src = "${arr[j]}"/>`;
 				$(".sm-box").eq(i).append(str7);
 			}		
+			
+			
 		}
+//		console.log($(".list-ri-bottom ul li").length)
 		
+		//小图滑动切换大图
 		$(".sn1").next().find("img").hover(function(){			
 			var oImg_src = $(this)[0].src;
 			var aImg = $(this).parent().parent().parent().children(".ss").children("img")[0];
 			aImg.src=oImg_src;
 		})
 		
-		
+		//点击列表跳详情
+		var $li = $(".list-ri-bottom ul li");		
+		for(var i = 0; i<$li.length;i++ ){
+			$li[i].index= i;
+			$li[i].onclick=function(){
+				var detailId = $($li[this.index]).attr("data-id");
+				console.log(detailId);
+//				setCookie("detail",detailId,7);
+				
+				window.location.href="../html/detail.html?id="+detailId;
+			}
+		}
 		
 		
 		

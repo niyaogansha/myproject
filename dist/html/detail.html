@@ -5,7 +5,9 @@
 		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
 		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+		<script src="../js/detail.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
 		<title></title>
 	</head>
 	<body>
@@ -19,7 +21,11 @@
 				</li>
 				<li>
 					<i>购物车</i>
-					<a href=""><em></em></a>
+					<a href="">
+						<em>
+							<span>0</span>
+						</em>
+					</a>
 				</li>
 				<li>
 					<i>我的收藏</i>
@@ -96,13 +102,13 @@
 				<div style="width: 1200px;margin: 0 auto;">
 					<ul class="ul">
 						<li class="sy">
-							<a href="" class="a">
+							<a href="../index.html" class="a">
 								首页
 								<span style="width: 40px;"></span>
 							</a>
 						</li>
 						<li>
-							<a href="" class="a">
+							<a href="list.html" class="a">
 								实体店	
 								<span></span>					
 							</a>
@@ -136,11 +142,11 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">时尚女装</a></p>
+													<p class="tit"><a href="list.html">时尚女装</a></p>
 													<p class="crum">
-														<a href="">连衣裙></a>
-														<a href="">外套></a>
-														<a href="">衬衫></a>
+														<a href="list.html">连衣裙></a>
+														<a href="list.html">外套></a>
+														<a href="list.html">衬衫></a>
 													</p>
 												</div>																						
 												<img src="../img/tp5.jpg"/>										
@@ -150,11 +156,11 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">品质男装</a></p>
+													<p class="tit"><a href="list.html">品质男装</a></p>
 													<p class="crum">
-														<a href="">衬衫></a>
-														<a href="">T恤></a>
-														<a href="">裤装></a>
+														<a href="list.html">衬衫></a>
+														<a href="list.html">T恤></a>
+														<a href="list.html">裤装></a>
 													</p>
 												</div>																						
 												<img src="../img/tp6.jpg"/>										
@@ -164,10 +170,10 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">运动户外</a></p>
+													<p class="tit"><a href="list.html">运动户外</a></p>
 													<p class="crum">
-														<a href="">男运动服></a>
-														<a href="">女运动服></a>
+														<a href="list.html">男运动服></a>
+														<a href="list.html">女运动服></a>
 													</p>
 												</div>																						
 												<img src="../img/tp7.jpg"/>										
@@ -177,11 +183,11 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">童装童鞋</a></p>
+													<p class="tit"><a href="list.html">童装童鞋</a></p>
 													<p class="crum">
-														<a href="">男童装></a>
+														<a href="list.html">男童装></a>
 														<a href="">女童装></a>
-														<a href="">鞋></a>
+														<a href="list.html">鞋></a>
 													</p>
 												</div>																						
 												<img src="../img/tp8.jpg"/>										
@@ -191,11 +197,11 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">内衣/袜子</a></p>
+													<p class="tit"><a href="list.html">内衣/袜子</a></p>
 													<p class="crum">
-														<a href="">文胸></a>
-														<a href="">内裤></a>
-														<a href="">睡衣></a>
+														<a href="list.html">文胸></a>
+														<a href="list.html">内裤></a>
+														<a href="list.html">睡衣></a>
 													</p>
 												</div>																						
 												<img src="../img/tp9.jpg"/>										
@@ -207,9 +213,9 @@
 												<div class="ab">
 													<p class="tit"><a href="">精品箱包</a></p>
 													<p class="crum">
-														<a href="">女包></a>
-														<a href="">男包></a>
-														<a href="">拉杠箱></a>
+														<a href="list.html">女包></a>
+														<a href="list.html">男包></a>
+														<a href="list.html">拉杠箱></a>
 													</p>
 												</div>																						
 												<img src="../img/zp1.jpg"/>										
@@ -219,10 +225,10 @@
 										<div class="boxitem">
 											<div class="boxtit">
 												<div class="ab">
-													<p class="tit"><a href="">品质鞋靴</a></p>
+													<p class="tit"><a href="list.html">品质鞋靴</a></p>
 													<p class="crum">
-														<a href="">女单鞋></a>
-														<a href="">男鞋></a>
+														<a href="list.html">女单鞋></a>
+														<a href="list.html">男鞋></a>
 													</p>
 												</div>																						
 												<img src="../img/zp2.jpg"/>										
@@ -234,8 +240,8 @@
 												<div class="ab">
 													<p class="tit"><a href="">家居家纺</a></p>
 													<p class="crum">
-														<a href="">套件></a>
-														<a href="">被芯/被毯></a>
+														<a href="list.html">套件></a>
+														<a href="list.html">被芯/被毯></a>
 													</p>
 												</div>																						
 												<img src="../img/zp3.jpg"/>										
@@ -248,52 +254,52 @@
 								<div class="xia">
 									<p>—&nbsp;热门品牌&nbsp;—</p>
 									<div class="sb">
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp4.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp5.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp6.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp7.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp8.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/zp9.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a1.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a2.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a3.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a4.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a5.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a6.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a7.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a8.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a9.jpg"/>
 										</a>
-										<a href="">
+										<a href="list.html">
 											<img src="../img/a0.jpg"/>
 										</a>										
 									</div>
@@ -311,20 +317,90 @@
 				<div class="detail-top">
 					<span></span>
 					<a href="">奥莱商城　></a>
-					<a href="">女装　></a>
+					<!--<a href="">女装　></a>
 					<a href="">女士上装　></a>
 					<a href="">针织/毛衣套头衫　></a>
 					<a href="">NEW LOOK　></a>
-					<a href="">露肩长袖针织套头衫 5062355</a>					
+					<a href="">露肩长袖针织套头衫 5062355</a>					-->
 				</div>
 				
 				<div class="detail-bottom">
 					<div class="de-bo-le">
+						<div class="left-1">
+							<!--<img src="../img/tp7.jpg"/>
+							<img src="../img/tp7.jpg"/>
+							<img src="../img/tp7.jpg"/>
+							<img src="../img/tp7.jpg"/>-->
+						</div>
 						
+						<!--放大镜-->
+						<div id="zoomBox">					
+							<!--<div id="midArea">
+								<img src="../img/tb1.jpg"/>
+								<div id="zoom"></div>
+							</div>
+							<div id="bigArea">
+								<img src="../img/tb1.jpg"/>
+							</div>-->
+						</div>
 					</div>
 					
-					<div class="de-bo-ri">
+					<div class="de-center">
+						<div class="top">
+							<i></i>
+							<!--<p>[支持自提]啊啊大daffodil</p>-->
+						</div>						
+						<span class="an1">奥莱价：<em>￥111<em></span>						
+						<!--<p class="pp1"></p>-->
+						<div class="de-bottom">
+							<div class="num1">
+								<span>选择数量</span>							
+							</div>
+							<div class="num2">
+								<input type="text" class="t1" value="1"/>
+								<span>
+									<em class="m1">+</em>
+									<em class="m2">-</em>
+								</span>
+							</div>
+							<!--<input type="button" id="btn" value="加入购物车" />
+							<input type="button" id="btn2" value="查看购物车" />-->
+						</div>
 						
+						<div class="pic-bot">
+							<ul>
+								<li>奥莱服务</li>
+								<li>
+									<i class="ico0"></i>
+									<a href="">品牌授权</a>
+								</li>
+								<li>
+									<i class="ico1"></i>
+									<a href="">急速售货</a>
+								</li>
+								<li>
+									<i class="ico2"></i>
+									<a href="">正品低价</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					
+					<div class="de-bo-ri">
+						<h6>——&nbsp;为你推荐&nbsp;——</h6>
+						<div class="xi-left">
+							<img src="../img/tp7.jpg"/>
+							<span>￥22</span>
+						</div>
+						<div class="xi-left">
+							<img src="../img/tp7.jpg"/>
+							<span>￥22</span>
+						</div>
+						<div class="xi-left">
+							<img src="../img/tp7.jpg"/>
+							<span>￥22</span>
+						</div>
 					</div>
 				</div>
 			</div>
