@@ -1,5 +1,4 @@
 $(function(){
-	
 	var classid = location.search.split("=")[1];
 	$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",{classID:classid},function(data){
 		console.log(data);
@@ -8,11 +7,11 @@ $(function(){
 		for(var i = 0; i < 4; i++){
 			str += `<li data-id="${data[i].goodsID}">
 					<div class="m-b-a">
-					<a href="" class="a-left">
+					<a href="../html/list.html" class="a-left">
 					<img src="${data[i].goodsListImg}"/>
 					</a>
 					<div class="a-right">
-					<a href="">
+					<a href="../html/list.html">
 					<em>${data[i].goodsName}</em>
 					<i class="ico">¥${data[i].price}</i>
 					<i class = "ico2">立即抢购</i>

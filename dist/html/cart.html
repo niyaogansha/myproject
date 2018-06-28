@@ -8,6 +8,31 @@
 		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.pro-bottom{
+				height: 40px;
+				width: 1000px;
+				margin: 0 auto;
+				background: #CCCCCC;
+				padding-left: 200px;
+				margin-top: 10px;
+				padding-top: 30px;
+			}
+			.pro-bottom span{
+				font-size: 16px;
+				color: #656565;
+				font-weight: 900;
+				display: flex;
+			}
+			.pro-bottom span i{
+				display: block;
+				font-style: normal;
+				font-size: 16px;
+				color: darkred;
+				font-weight: 900;
+			}
+		</style>
 	</head>
 	<body>
 		<!--头部-->
@@ -18,14 +43,14 @@
 					<li class="al">
 						奥特莱斯购物中心
 						<ul>
-							<li><a href="">深圳华盛奥特莱斯</a></li>
-							<li><a href="">南宁华盛奥特莱斯</a></li>
-							<li><a href="">南昌华盛奥特莱斯</a></li>
-							<li><a href="">西安华盛奥特莱斯</a></li>
-							<li><a href="">郑州华盛奥特莱斯</a></li>
-							<li><a href="">哈尔滨华盛奥特莱斯</a></li>
-							<li><a href="">重庆华盛奥特莱斯</a></li>
-							<li><a href="">合肥华盛奥特莱斯</a></li>
+							<li><a href="../index.html">深圳华盛奥特莱斯</a></li>
+							<li><a href="../index.html">南宁华盛奥特莱斯</a></li>
+							<li><a href="../index.html">南昌华盛奥特莱斯</a></li>
+							<li><a href="../index.html">西安华盛奥特莱斯</a></li>
+							<li><a href="../index.html">郑州华盛奥特莱斯</a></li>
+							<li><a href="../index.html">哈尔滨华盛奥特莱斯</a></li>
+							<li><a href="../index.html">重庆华盛奥特莱斯</a></li>
+							<li><a href="../index.html">合肥华盛奥特莱斯</a></li>
 						</ul>
 					</li>
 					<li class="sj">商家入驻</li>
@@ -33,11 +58,11 @@
 				<div class="header-right">
 					<ul>
 						<li>您好,欢迎来到奥莱购</li>
-						<li><a href="">请登录</a></li>
-						<li><a href="">免费注册</a></li>
+						<li><a href="logon.html">请登录</a></li>
+						<li><a href="register.html">免费注册</a></li>
 						<li class="ls">
 							<span class="icon-cart"></span>
-							<a href="">购物车</a>
+							<a href="cart.html">购物车</a>
 							<span class="num fl" style="color: red; font-weight: 900; margin-left: 5px;">0</span>
 						</li>
 						<li><a href="">订单查询</a></li>
@@ -71,8 +96,11 @@
 					<span>(76)</span>
 				</h6>
 				<div class="pro-center">
-					<ul class="pro-header">						
-						<li style="width: 60px;">全选</li>
+					<ul class="pro-header" style="margin-bottom: 10px;">						
+						<li style="width: 60px;">
+							全选
+						<input type="checkbox" id="checkAll">
+						</li>
 						<li style="width: 540px;">订单商品</li>	
 						<li style="width: 120px;">单价</li>
 						<li style="width: 120px;">数量</li>
@@ -120,6 +148,14 @@
 						</div>-->
 					</div>
 					
+					<div class="pro-bottom">						
+						<span class="pw">
+							总计：
+							<i id="qian">22</i>
+							元
+						</span>
+						
+					</div>
 					
 					
 				</div>

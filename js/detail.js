@@ -64,56 +64,67 @@ $(function(){
 					$(".t1").val(num);
 				}			
 			})
-//			console.log($(".t1").val())
 			//购物车
 			$("#btn").click(function(){
 				var goodsId = $(this).attr("data-id");
-//				console.log(data);
+				$.cookie("numcook",$(".t1").val(),{expires:7,path:"/"});
 				
 				$.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?callback=?",{userID:$.cookie("username")},function(data){
-//					console.log(data);
-					for (var i=0;i<data.length;i++) {						
-						if(goodsId==data[i].goodsID){
-							
-							var goodsNumber = Number(data[i].number);
-//							console.log(data);
-//							console.log(goodsId)
-							goodsNumber+=Number($(".t1").val());
-//							console.log(goodsNumber)
-							$.get(
-								"http://datainfo.duapp.com/shopdata/updatecar.php",
+					console.log(data);
+					if(data == 0){
+						$.get(
+							"http://datainfo.duapp.com/shopdata/updatecar.php",
 							{userID:$.cookie("username"),
-							goodsID:goodsId,number:goodsNumber},
+							goodsID:goodsId},
 							function(data){
-			//					console.log(data);
-			
+							console.log("aa");
+								
 								if(data==0){
 									alert("添加失败");
 								}
 								if(data == 1){
-			//						alert("添加成功");
-									Number($(".list5 li").eq(1).find("span").val())+Number($(".t1").val());						
-								}
-//								console.log(goodsNumber)
+//									Number($(".list5 li").eq(1).find("span").val())=Number($(".t1").val());						
+								}															
 							})
-//							console.log(data)
+					}else{
+						for(var i=0;i<data.length;i++) {
+						if(goodsId==data[i].goodsID){
+							console.log(data)
+							var goodsNumber = Number(data[i].number);
+							goodsNumber+=Number($(".t1").val());
+							$.get(
+								"http://datainfo.duapp.com/shopdata/updatecar.php",
+								{userID:$.cookie("username"),
+								goodsID:goodsId,number:goodsNumber},
+								function(data){
+									
+				
+									if(data==0){
+										alert("添加失败");
+									}
+									if(data == 1){
+										alert("添加成功");
+										Number($(".list5 li").eq(1).find("span").val())+Number($(".t1").val());						
+									}
+								})
 						}else{
 							$.get(
 								"http://datainfo.duapp.com/shopdata/updatecar.php",
 							{userID:$.cookie("username"),
 							goodsID:goodsId,number:$(".t1").val()},
 							function(data){
-			//					console.log(data);
+//							console.log("aa");								
 								if(data==0){
 									alert("添加失败");
 								}
 								if(data == 1){
-			//						alert("添加成功");
 									Number($(".list5 li").eq(1).find("span").val())+Number($(".t1").val());						
 								}															
 							})
 						}
 					}
+					}
+					
 				})
 				
 			})
